@@ -1,0 +1,30 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:ContactList.ViewModels"
+             x:Class="ContactList.Views.ContactDetailsPage"
+             Title="Contact Details">
+
+    <ContentPage.BindingContext>
+        <viewmodels:ContactDetailsViewModel />
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <Label Text="Name" FontAttributes="Bold" />
+            <Label Text="{Binding Contact.Name}" />
+
+            <Label Text="Email" FontAttributes="Bold" />
+            <Label Text="{Binding Contact.Email}" />
+
+            <Label Text="Phone Number" FontAttributes="Bold" />
+            <Label Text="{Binding Contact.PhoneNumber}" />
+
+            <Label Text="Description" FontAttributes="Bold" />
+            <Label Text="{Binding Contact.Description}" />
+
+            <Button Text="Back" Clicked="OnBackClicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
